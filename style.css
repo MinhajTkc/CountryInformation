@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    /* font-family: "Playfair Display", serif; */
+  
+  }
+
+  body {
+      background-color: #434545;
+      overflow-x: hidden;
+    /* overflow-y: hidden; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .searchContainer {
+    background-color: #ffffff;
+    padding: 10px 40px;
+    margin-top: 1.5%;
+    position: absolute;  
+    border-radius: 3px;
+    box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25);
+    background-color: #8d6e6ea1;
+    
+  }  
+ 
+
+  .search-wrapper {
+    display: grid;
+    grid-template-columns: 4fr 1fr ;
+    gap: 20px;
+    
+  }
+  
+  .search-wrapper button {
+    font-size: 16px;
+    background-color: #3d64e6;
+    color: #ffffff;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    
+  }
+
+
+  .search-wrapper input {
+    font-size: 1em;
+    padding: 0 0.62em;
+    border: none;
+    border-bottom: 2px solid #3d64e6;
+    outline: none;
+    color: #222a43;  
+    border-radius: 5px;
+    
+  }
+
+ 
+  #result { 
+    top: 10%;
+    background-color: rgba(255, 255, 255, 0.947);
+    display: none;
+    width: 60%;
+    min-width: 300px;
+    max-width: 800px;
+    padding: 50px 40px;
+    border-radius: 8px;
+    box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25);
+    margin: 2%;
+
+  }
+
+  .flag-img {
+    display: block;
+    width: 45%;
+    min-width: 7.5em;
+    margin: 1.8em auto 1.2em auto;
+  }
+
+
+  #result h2 {
+    font-weight: 600;
+    color: #222a43;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.8em;
+  }
+
+  .data-wrapper {
+    margin-bottom: 1em;
+    letter-spacing: 0.3px;
+  }
+
+  #result h3{
+    color: tomato;  
+    font-size: xx-large;
+    font-family: "Playfair Display", serif;
+    
+  }
+
+  #result h4 {
+    display: inline;
+    font-weight: 500;
+    color: #222a43;
+  }
+
+  #result span {
+    color: #5d6274;
+  }
+
+
+
+ /* ............svg style............ */
+
+ svg{
+  margin-top: 100px; 
+ }
+
+ p{    
+    /* text-align: center; */
+    font-size: .8em;
+    font-weight: 400;
+    color: rgba(255, 8, 8, 0.902);
+    letter-spacing: 1.5px;
+   padding: 5px;
+   
+  }
+
+ #name {
+  position: absolute;
+  width: fit-content;
+  opacity: 0;
+  border-radius: 8px;
+  border: 2px dotted rgb(218, 182, 182);
+  padding-left: 5px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+svg path {
+  cursor: pointer;  
+}
+
+
+.allPaths {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 10s infinite forwards;
+}
+
+@keyframes draw {
+  to {
+      stroke-dashoffset: -1000;
+  }
+}
+
+/* Add other styling for your SVG as needed */
+#allSvg {
+  width: 70%;
+  height: 70vh;
+  border: 1px dashed #a48484e7;
+}
+
+  @media(max-width:480px){
+    .search-wrapper {
+      grid-template-columns:  4fr 1fr ;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .searchContainer{
+      padding: 10px;
+      margin-top: 18px;
+    }
+
+    .searchContainer button{
+      height: 38px;
+      width: 55px;
+      font-size: 12px;
+      color: #d4b8b8;
+      background-color: #434545;
+      font-weight: 500;
+      border: 1px dashed rgba(255, 255, 255, 0.525);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      
+    }
+
+    .search-wrapper input {
+      
+      border: none;
+      outline: none;
+      color: #ffffffb1;  
+      border-radius: 10px;
+      background-color: rgb(68, 53, 53);
+    }
+
+    .search-wrapper button {
+      border: none;
+      border-radius: 10px;
+      background-color: rgb(68, 53, 53);
+    }
+
+    input{
+      height: 40px;
+    }
+
+    svg{
+      margin-bottom: 12px;
+     }
+
+     input::placeholder {
+      font-size: 14px; 
+     
+    }
+
+    #allSvg {
+      width: 85%;
+      height: 30vh;
+      border: 1px dashed #a48484e7;
+    }
+   
+  }
+
+ 
